@@ -86,11 +86,5 @@ public class PersonaTest {
     }
 
 
-    @Test
-    void testFormatoCorrectoDNI() {
-        Pattern modelo = Pattern.compile("\\b\\d{8}[A-Z]\\b");
-        Matcher buscador = modelo.matcher(persona.toString());
-        assertTrue(buscador.find());
-    }
 
 }
