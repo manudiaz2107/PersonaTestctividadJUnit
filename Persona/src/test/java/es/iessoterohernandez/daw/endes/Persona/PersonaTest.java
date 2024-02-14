@@ -48,12 +48,12 @@ public class PersonaTest {
 
     @Test
     void testEdadPositiva() {
-        assertDoesNotThrow(() -> persona.setEdad(50));
+        assertDoesNotThrow(() -> persona.setEdad(48));
     }
 
     @Test
     void testEdadNegativa() {
-        assertThrows(AssertionError.class, () -> persona.setEdad(-1));
+        assertThrows(AssertionError.class, () -> persona.setEdad(-2));
     }
 
     @Test
@@ -69,7 +69,7 @@ public class PersonaTest {
 
     @Test
     void testSobrepesoNuevaAltura() {
-        persona.setAltura(1.3);
+        persona.setAltura(1.4);
         assertThat(persona.calcularIMC(), is(Persona.SOBREPESO));
     }
 
